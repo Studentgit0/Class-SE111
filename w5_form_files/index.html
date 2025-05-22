@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Tommy">
+  <meta name="description" content="Default HTML Page for SE 111">
+  <title>Week 5 | Tables and Forms</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px;
+    }
+    th {
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Birthday Party Registration Form</h1>
+
+  <form action="confirm.html" method="get">
+    <table>
+      <thead>
+        <tr>
+          <th>Labels</th>
+          <th>Form Fields</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Parent/Guardian Name</td>
+          <td>
+            <input type="text" name="parent_fname" placeholder="First Name" required><br>
+            <input type="text" name="parent_lname" placeholder="Last Name" required>
+          </td>
+        </tr>
+        <tr>
+          <td>Child's First Name</td>
+          <td><input type="text" name="child_name" placeholder="Child's First Name" required></td>
+        </tr>
+        <tr>
+          <td>Child's Age</td>
+          <td><input type="number" name="child_age" required></td>
+        </tr>
+        <tr>
+          <td colspan="2"><strong>Date and Time</strong></td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td><input type="date" name="date" required></td>
+        </tr>
+        <tr>
+          <td>Start Time</td>
+          <td><input type="time" name="start_time" required></td>
+        </tr>
+        <tr>
+          <td>Number of Guests</td>
+          <td><input type="number" name="guests" required></td>
+        </tr>
+        <tr>
+          <td colspan="2"><strong>Food</strong></td>
+        </tr>
+        <tr>
+          <td>Size</td>
+          <td>
+            <input type="radio" name="size" value="sm" required> sm
+            <input type="radio" name="size" value="med"> med
+            <input type="radio" name="size" value="lg"> lg
+          </td>
+        </tr>
+        <tr>
+          <td>Drinks</td>
+          <td>
+            <input type="checkbox" name="drink" value="coke" checked> Coke<br>
+            <input type="checkbox" name="drink" value="sprite"> Sprite<br>
+            <input type="checkbox" name="drink" value="fruit punch"> fruit punch<br>
+            <input type="checkbox" name="drink" value="lemonade"> lemonade<br>
+            <input type="checkbox" name="drink" value="iced tea"> Iced Tea
+          </td>
+        </tr>
+        <tr>
+          <td>Cake</td>
+          <td>
+            <select name="cake">
+              <option value="chocolate">Chocolate</option>
+              <option value="vanilla">Vanilla</option>
+              <option value="strawberry">Strawberry</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"><strong>Decorations</strong></td>
+        </tr>
+        <tr>
+          <td>Color Scheme</td>
+          <td>
+            Choose a color scheme for the party<br>
+            <input type="color" name="color_scheme">
+          </td>
+        </tr>
+        <tr>
+          <td>Additional Comments</td>
+          <td>
+            <textarea name="comments" rows="4" cols="30" placeholder="Please add any additional comments"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            <input type="submit" value="submit">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+
+</body>
+</html>
