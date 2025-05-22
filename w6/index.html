@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Week 6 | Calculator</title>
+</head>
+<body>
+
+  <h1>Pay Calculator</h1>
+  <p>Click to calculate your pay.</p>
+
+  <button id="calculate-pay">Calculate  Pay</button>
+
+  <script>
+    var button = document.querySelector("#calculate-pay");
+
+    button.addEventListener("click", function() {
+      var hourlyPay = Number(prompt("Hourly pay:\n(Example: 10.00)"));
+      var hoursWorked = Number(prompt("Hours worked in 2 weeks:\n(Example: 10)"));
+      var taxRate = Number(prompt("Tax percentage:\n(Example: 10 for 10%)"));
+
+      if (isNaN(hourlyPay) || isNaN(hoursWorked) || isNaN(taxRate)) {
+        alert("Please enter a valid input");
+        return;
+      }
+
+      var grossPay = hourlyPay * hoursWorked;
+      var taxAmount = grossPay * (taxRate / 100);
+      var netPay = grossPay - taxAmount;
+
+      grossPay = grossPay.toFixed(2);
+      taxAmount = taxAmount.toFixed(2);
+      netPay = netPay.toFixed(2);
+
+      alert("Gross Pay: $" + grossPay + "\n" +
+            "Uncle Sam's Share: $" + taxAmount + "\n" +
+            "Net Pay: $" + netPay);
+
+      console.log("Gross Pay: $" + grossPay);
+      console.log("Uncle Sam's Share: $" + taxAmount);
+      console.log("Net Pay: $" + netPay);
+    });
+  </script>
+
+</body>
+</html>
